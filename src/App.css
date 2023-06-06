@@ -1,38 +1,67 @@
-.App {
+.todoapp {
   text-align: center;
+  padding: 20px 150px;
+  width: 20%;
+  height: 70%;
+  background-color: white;
+  border: 1px solid;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Todo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  margin-bottom: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.Todo input {
+  font-size: 18px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Todo button {
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: azure;
   }
-  to {
-    transform: rotate(360deg);
+}
+ul {
+  margin: 2px;
+  list-style: none;
+  padding: 0;
+  font-size: 17px;
+  width: 400px;
+}
+ul li.completed label {
+  text-decoration: line-through;
+}
+.view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  gap: 10px;
+}
+
+.task-todo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.task-todo .filter {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.task-todo .filter li {
+  padding: 0px 10px;
+}
+
+.task-todo .filter li a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: aqua;
   }
 }
